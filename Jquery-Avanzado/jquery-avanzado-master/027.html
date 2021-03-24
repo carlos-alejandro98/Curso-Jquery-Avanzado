@@ -8,13 +8,6 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/estilo.css">
 
-    <style>
-
-      #mensaje{ display: block; }
-      html.JS #mensaje {display: none;}
-
-    </style>
-
   </head>
   <body>
 
@@ -23,20 +16,21 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
     </p>
 
-    <div id="mensaje">
-      Este sitio requiere JAVASCRIPT!, porfavor activelo
-    </div>
+
+    <button type="button" id="btnAccion"> Click me </button>
 
 
     <!-- Librería de jQuery -->
     <script src="assets/libs/jquery-3.min.js" charset="utf-8"></script>
     <script>
 
-      $(document).ready(function(){
+      var boton = $('#btnAccion');
 
-          $('html').addClass('JS');
-
+      boton.one('click', function(){
+        alert('Hola Mundo');
       });
+
+      
 
     </script>
 
